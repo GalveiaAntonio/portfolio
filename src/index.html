@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>António Galveia - Frontend Developer & Web Designer</title>
+
+    <meta name="description"
+        content="António Galveia is a Lisbon-based frontend developer and web designer building websites with HTML, CSS and JavaScript, with a focus on design, performance and responsive development.">
+    <meta name="author" content="António Galveia">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="António Galveia — Frontend Developer & Web Designer">
+    <meta property="og:description"
+        content="António Galveia is a Lisbon-based frontend developer and web designer building websites with HTML, CSS and JavaScript, with a focus on design, performance and responsive development.">
+    <meta property="og:url" content="https://galveiadev.vercel.app/?lang=en">
+    <meta property="og:site_name" content="António Galveia">
+    <meta property="og:image" content="https://galveiadev.vercel.app/media/portfolio1.png">
+    <meta property="og:image:alt" content="António Galveia — Frontend Developer & Web Designer">
+
+
+    <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="topnav">
+        <div class="wrap">
+            <div class="serif" style="font-weight:700; font-size:15px;">antonio.galveia</div>
+            <ul class="links">
+                <li><a href="#sobre" data-en="about me" data-pt="sobre mim">about me</a></li>
+                <li><a href="#trabalho" data-en="projects" data-pt="projetos">projects</a></li>
+                <li><a href="#processo" data-en="process" data-pt="processo">process</a></li>
+                <li><a href="#contacto" data-en="contact" data-pt="contacto">contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="change light-theme to dark">
+                        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v3M12 19v3M4.2 4.2l2 2M17.8 17.8l2 2M2 12h3M19 12h3M4.2 19.8l2-2M17.8 6.2l2-2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.5A8.5 8.5 0 1 1 11.5 3 7 7 0 0 0 21 12.5Z" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="lang-toggle" id="langToggle" aria-label="switch language / mudar idioma">
+                        <span class="flag" id="langFlag"></span>
+                        <span class="code" id="langCode">PT</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <section class="hero">
+        <div class="wrap">
+            <div class="hero-top">
+                <span class="eyebrow-cap">Frontend Developer & Web Designer</span>
+            </div>
+
+            <div class="hero-stage">
+                <h1 class="headline"><span class="h-solid">ANTÓNIO</span><span class="h-outline">GALVEIA</span></h1>
+                <div class="hero-photo">
+                    <img src="media/heroCover.jpg" style="width:100%;height:100%;object-fit:cover"
+                        alt="António Galveia">
+                </div>
+                <div class="location-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" />
+                        <circle cx="12" cy="10" r="2.4" />
+                    </svg>
+                    Lisboa, Portugal
+                </div>
+
+                <div class="hero-copy">
+                    <h2 data-en="Turning your ideas and <br><em>thoughts</em> into
+                        <em>reality.</em>" data-pt="Transformando as suas <br><em> ideias </em> em
+        <em>realidade.</em>">Turning your ideas into <br><em>websites</em> that
+                        <em>work.</em>
+                    </h2>
+                    <div class="rule"></div>
+                    <p data-en="I build websites with HTML, CSS and JavaScript, with a strong
+    focus on layout, typography and responsive design. I like taking
+    an idea from a rough concept to something that actually works
+    in the browser."
+                        data-pt="Crio websites utilizando HTML, CSS e JavaScript, com um forte foco no layout, tipografia e um design responsivo. Gosto de transformar uma ideia — de um conceito inicial — em algo que realmente funcione no browser.">
+                        I build websites with HTML, CSS and JavaScript, with a strong
+                        focus on layout, typography and responsive design. I like taking
+                        an idea from a rough concept to something that actually works
+                        in the browser.</p>
+                    <div class="hero-actions">
+                        <a href="#trabalho" class="btn btn-ink" data-en="see my work
+                                ↗" data-pt="explorar o meu trabalho ↗">see my work
+                            ↗</a>
+                    </div>
+                </div>
+
+                <div class="stat-strip">
+                    <div class="item">
+                        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                            <rect x="3" y="4" width="18" height="13" rx="1.5" />
+                            <path d="M8 21h8M12 17v4" />
+                        </svg>
+                        <div>
+                            <div class="num">3+</div>
+                            <div class="lbl" data-en="Projects Built" data-pt="Projetos Construídos">Projects
+                                Built</div>
+                        </div>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="item">
+                        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                            <path d="M12 2l3 6.5 7 .9-5.2 4.8L18.2 21 12 17.3 5.8 21l1.4-6.8L2 9.4l7-.9 3-6.5Z" />
+                        </svg>
+                        <div>
+                            <div class="num">7+</div>
+                            <div class="lbl" data-en="Technologies Used" data-pt="Tecnologias Utilizadas">Technologies
+                                Used</div>
+                        </div>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="item">
+                        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                            <path
+                                d="M20.8 4.6c-1.6-1.6-4.2-1.6-5.8 0L12 7.4 9 4.6c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8L12 19l8.8-8.6c1.6-1.6 1.6-4.2 0-5.8Z" />
+                        </svg>
+                        <div>
+                            <div class="num">4+</div>
+                            <div class="lbl" data-en="Years Learning and Building"
+                                data-pt="Anos Construindo e Aprendendo">Years
+                                Learning & Building</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="about" id="sobre">
+        <div class="wrap">
+            <div class="section-head"><span class="eyebrow-cap" data-en="About Me" data-pt="Sobre Mim">About
+                    Me</span></div>
+            <div class="about-grid">
+                <div>
+                    <h3 data-en="A little bit about <br>who I am." data-pt="Um pouco sobre <br> quem sou.">A
+                        little bit about <br>who I am.</h3>
+                    <p data-pt="Olá, sou o António, um web designer e desenvolvedor frontend de 18 anos baseado em Lisboa.
+Comecei a explorar HTML e CSS aos 12 anos e, depois de algum tempo afastado,
+voltei a estudar desenvolvimento web de forma mais séria.<br><br>
+
+Atualmente, trabalho sobretudo com HTML, CSS e JavaScript e tenho vindo a
+aprofundar os meus conhecimentos através de projetos pessoais. Gosto
+particularmente de pensar na estrutura de uma página, no seu design e na forma
+como tudo se adapta a diferentes dispositivos.<br><br>
+
+Este portfólio é também parte desse percurso. É um espaço onde reúno os projetos
+que vou construindo, as tecnologias que utilizo e aquilo que vou aprendendo ao
+longo do caminho." data-en="Hi, I’m António, an 18-year-old frontend developer and web designer based in Lisbon.
+I first started exploring HTML and CSS when I was 12 and, after some time away,
+I returned to web development and began studying it more seriously.<br><br>
+
+I currently work mainly with HTML, CSS and JavaScript and continue developing
+my skills through personal projects. I particularly enjoy thinking about a
+website’s structure, its design and how everything adapts across different
+devices.<br><br>
+
+This portfolio is also part of that journey. It is a place where I share the
+projects I build, the technologies I use and what I continue to learn along
+the way.">Hi, I’m António, an 18-year-old frontend developer and web designer based in Lisbon.
+                        I first started exploring HTML and CSS when I was 12 and, after some time away,
+                        I returned to web development and began studying it more seriously.<br><br>
+
+                        I currently work mainly with HTML, CSS and JavaScript and continue developing
+                        my skills through personal projects. I particularly enjoy thinking about a
+                        website’s structure, its design and how everything adapts across different
+                        devices.<br><br>
+
+                        This portfolio is also part of that journey. It is a place where I share the
+                        projects I build, the technologies I use and what I continue to learn along
+                        the way.</p>
+                </div>
+                <div>
+                    <div class="skill-group">
+                        <h4>Frontend</h4>
+                        <div class="skill-chips">
+                            <span>HTML /
+                                CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Backend</h4>
+                        <div class="skill-chips">
+                            <span>Node.js</span>
+                            <span>PostegreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4 data-en="Tools" data-pt="Ferramentas">Tools</h4>
+                        <div class="skill-chips">
+                            <span>Git</span><span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <article class="cta-banner">
+        <div class="cta-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M9 18h6" />
+                <path d="M10 21h4" />
+                <path
+                    d="M12 3a6 6 0 0 0-6 6c0 2.2 1.2 3.6 2.2 4.7.6.7 1 1.3 1.1 2.3h5.4c.1-1 .5-1.6 1.1-2.3C16.8 12.6 18 11.2 18 9a6 6 0 0 0-6-6Z" />
+                <path d="M12 6.5c-1.6 0-2.8 1.1-3 2.7" />
+            </svg>
+            <h4 data-pt="Uma <em> curiosidade:</em>" data-en="A little <em>curiosity:</em>">A little
+                <em>curiosity:</em>
+            </h4>
+        </div>
+        <p class="cta-mid" data-pt="O meu primeiro contacto com desenvolvimento web aconteceu aos 12 anos,
+    quando comecei a explorar HTML e CSS por curiosidade. Depois de algum tempo
+    afastado, voltei a estudar front-end de forma mais séria e essa curiosidade
+    acabou por se transformar numa área à qual quero continuar a dedicar-me. 😊" data-en="My first contact with web development happened when I was 12,
+    when I started exploring HTML and CSS out of curiosity. After some time away,
+    I returned to front-end development more seriously, and that curiosity
+    gradually turned into something I want to keep pursuing. 😊">My first contact with web development happened when I
+            was 12,
+            when I started exploring HTML and CSS out of curiosity. After some time away,
+            I returned to front-end development more seriously, and that curiosity
+            gradually turned into something I want to keep pursuing. 😊</p>
+    </article>
+
+
+
+
+
+
+
+    <section class="works-services" id="trabalho">
+        <div class="wrap">
+            <div class="ws-grid">
+                <div>
+                    <div class="section-head">
+                        <span class="eyebrow-cap" data-pt="trabalhos selecionados" data-en="selected work">selected
+                            work</span>
+                        <a href="https://github.com/GalveiaAntonio?tab=repositories" data-en="see all projects"
+                            data-pt="ver todos os meus projetos" target="_blank">see all
+                            projects →</a>
+                    </div>
+                    <div class="works-grid">
+                        <div class="work-card" data-title="Montra Tracker" data-title-pt="Tracker Montra"
+                            data-desc="A personal finance web app designed to bring income, expenses, budgets and savings into one dashboard. The goal was to make it easier to keep track of different areas of personal finances in one place."
+                            data-desc-pt="Uma aplicação web de gestão financeira pessoal que reúne rendimentos, despesas, orçamentos e poupanças num único dashboard. O objetivo foi facilitar o acompanhamento das diferentes áreas das finanças pessoais num só lugar."
+                            data-tools="HTML, CSS, JavaScript, SQL, PostgreSQL, Supabase"
+                            data-live="https://montratracker.vercel.app/"
+                            data-code="https://github.com/GalveiaAntonio/montra-app"
+                            data-images="media/montra1.png,media/montra2.png,media/montra3.png,media/montra4.png">
+                            <div class="work-thumb t2"><span class="num">02</span>
+                                <span class="view-hint" data-en="view project ↗" data-pt="ver projeto ↗">view project
+                                    ↗</span>
+                            </div>
+                            <h3 data-en="Montra Tracker" data-pt="Montra Tracker">Montra Tracker
+                            </h3>
+                            <p>Web App ·
+                                2026</p>
+                        </div>
+                        <div class="work-card" data-title="My Portfolio" data-title-pt="O meu portfolio"
+                            data-desc="My personal portfolio, designed and built from scratch with HTML, CSS and JavaScript. I wanted it to feel closer to an editorial website than a typical developer portfolio, using large typography, strong contrast and a darker visual identity."
+                            data-desc-pt="O meu portfólio pessoal, desenhado e desenvolvido do zero com HTML, CSS e JavaScript. Quis criar algo mais próximo de um website editorial do que de um portfólio tradicional de developer, recorrendo a tipografia de grande dimensão, contraste e uma identidade visual mais escura."
+                            data-tools="HTML, CSS, JavaScript" data-live="https://galveiadev.vercel.app/?lang=en"
+                            data-code="https://github.com/GalveiaAntonio/portfolio"
+                            data-images="media/portfolio1.png,media/portfolio2.png,media/portfolio3.png,media/portfolio4.png,media/portfolio5.png">
+                            <div class="work-thumb t1"><span class="num">01</span>
+                                <span class="view-hint" data-en="view project ↗" data-pt="ver projeto ↗">view project
+                                    ↗</span>
+                            </div>
+                            <h3 data-en="My Portfolio" data-pt="O meu portfólio">My Portfolio
+                            </h3>
+                            <p>Website ·
+                                2026</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div>
+                    <div class="section-head"><span class="eyebrow-cap" data-en="My Services"
+                            data-pt="Os meus Serviços">My
+                            Services</span></div>
+                    <ul class="services-list">
+                        <li>
+                            <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <rect x="3" y="4" width="18" height="14" rx="2" />
+                                    <path d="M8 21h8" />
+                                </svg></div>
+                            <div>
+                                <h4 data-en="Frontend Development" data-pt="Desenvolvimento Frontend">Frontend
+                                    Development</h4>
+                                <p data-pt="Websites responsivos desenvolvidos com HTML, CSS e JavaScript, pensados para funcionar em diferentes tamanhos de ecrã."
+                                    data-en="Responsive websites built with HTML, CSS and JavaScript, designed to work across different screen sizes.">
+                                    Responsive websites built with HTML, CSS and JavaScript, designed to work across different screen sizes.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M12 3v18M3 12h18" />
+                                </svg></div>
+                            <div>
+                                <h4 data-pt="Design UI / UX" data-en="UI / UX Design">UI
+                                    / UX Design</h4>
+                                <p data-en="Clear and straightforward interfaces designed with usability,
+layout and visual hierarchy in mind." data-pt="Interfaces claras e simples, pensadas com atenção à
+   usabilidade, ao layout e à hierarquia visual.">
+                                    Clear and straightforward interfaces designed with usability,
+                                    layout and visual hierarchy in mind.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M4 7h16M4 12h16M4 17h10" />
+                                </svg></div>
+                            <div>
+                                <h4 data-pt="Backend &amp; Dados" data-en="Backend &amp; Data">Backend &amp; Data</h4>
+                                <p data-pt="Aplicações web com bases de dados, autenticação e integração de APIs." data-en="Web applications supported by databases, authentication and APIs.">Web applications supported by databases, authentication and APIs.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+                                </svg></div>
+                            <div>
+                                <h4>Performance</h4>
+                                <p data-pt="Websites desenvolvidos com atenção ao desempenho, à adaptação a diferentes dispositivos e às boas práticas básicas de SEO."
+                                    data-en="Websites built with performance, responsive behaviour and basic SEO practices in mind.">Websites built with performance, responsive behaviour and basic SEO practices in mind.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="process" id="processo">
+        <div class="wrap">
+            <div class="section-head"><span class="eyebrow-cap" data-pt="A minha maneira de trabalhar" data-en="How I work">How I work</span></div>
+            <div class="process-row">
+                <div class="proc-step">
+                    <div class="idx">01</div>
+                    <h5 data-en="Understand" data-pt="Perceber">Understand</h5>
+                    <p data-en="I start by understanding what needs to be built, who it is for, and what the website actually needs to achieve."
+                        data-pt="Começo por entender o que é preciso ser construído, o seu público-alvo e o que o site realmente precisa alcançar.">
+                        I start by understanding what needs to be built, who it is for, and what the website actually
+                        needs to achieve.</p>
+                </div>
+                <div class="proc-step">
+                    <div class="idx">02</div>
+                    <h5 data-en="Plan" data-pt="Planeamento">Plan</h5>
+                    <p data-en="I organise the content, layout and functionality before writing
+    the code." data-pt="Organizo o conteúdo, o layout e as funcionalidades antes de escrever o código.">I organise the
+                        content, layout and functionality before writing
+                        the code.</p>
+                </div>
+                <div class="proc-step">
+                    <div class="idx">03</div>
+                    <h5>Design</h5>
+                    <p data-en="I work on typography, spacing, hierarchy and the overall visual
+    direction of the website."
+                        data-pt="Trabalho na tipografia, no espaçamento, na hierarquia e na direção visual geral do site.">
+                        I work on typography, spacing, hierarchy and the overall visual
+                        direction of the website.</p>
+                </div>
+                <div class="proc-step">
+                    <div class="idx">04</div>
+                    <h5 data-pt="Desenvolvimento" data-en="Build">Build</h5>
+                    <p data-pt="Transformo o design em HTML, CSS e JavaScript responsivos e
+    testo o código em diferentes dispositivos e ambientes." data-en="I turn the design into responsive HTML, CSS and JavaScript and
+    test it across different screen sizes and environments.">I turn the design into responsive HTML, CSS and JavaScript
+                        and
+                        test it across different screen sizes and environments.</p>
+                </div>
+                <div class="proc-step">
+                    <div class="idx">05</div>
+                    <h5 data-en="Launch" data-pt="Lançamento">Launch</h5>
+                    <p data-en="Before publishing, I test the website, fix issues and make final adjustments to improve the overall result." data-pt="Antes de publicar, testo o site, corrijo problemas e faço ajustes finais para melhorar o resultado geral.">Before publishing, I test the website, fix issues and make final adjustments to improve the overall result.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="contact" id="contacto">
+        <div class="wrap">
+            <div class="contact-grid">
+                <div class="contact-copy">
+                    <span class="eyebrow-cap" data-en="Contact Me" data-pt="Entre em Contacto">Contact Me</span>
+                    <h3 data-en="Let's create something<br><em
+                                    style='font-style:italic; color:var(--olive);'>memorable</em>,
+                                together." data-pt="Vamos criar algo<br><em
+                                    style='font-style:italic; color:var(--olive);'>memorável</em>,
+                                juntos.">Let's create something<br><em
+                            style="font-style:italic; color:var(--olive);">memorable</em>,
+                        together.</h3>
+                    <p data-en="Have a project or an idea you would like to discuss?
+You can contact me directly or use the form below. I am currently
+open to freelance projects, collaborations and other opportunities."
+                        data-pt="Tem um projeto ou uma ideia que gostaria de discutir?
+Pode entrar em contacto diretamente comigo ou utilizar o formulário.
+Atualmente, estou aberto a projetos freelance, colaborações e outras oportunidades.">
+                        Have a project or an idea you would like to discuss?
+You can contact me directly or use the form below. I am currently
+open to freelance projects, collaborations and other opportunities.</p>
+                    <a class="email" href="mailto:antonioalves.galveia@gmail.com">antonioalves.galveia@gmail.com</a>
+                </div>
+
+                <div class="form-panel">
+                    <form id="contactForm" action="https://formspree.io/f/xeajkgbk" method="POST">
+                        <div class="field-row">
+                            <div class="field"><label for="fname" data-en="name" data-pt="nome">name</label><input
+                                    id="fname" name="name" type="text" placeholder="your name"
+                                    data-en-placeholder="your name" data-pt-placeholder="o seu nome" required></div>
+                            <div class="field"><label for="femail">email</label><input id="femail" name="email"
+                                    type="email" placeholder="your@email.com" data-en-placeholder="your@email.com"
+                                    data-pt-placeholder="oseu@email.com" required></div>
+                        </div>
+                        <div class="field"><label for="fmessage" data-en="message"
+                                data-pt="mensagem">message</label><textarea id="fmessage" name="message"
+                                placeholder="tell me more about your project..."
+                                data-en-placeholder="tell me more about your project..."
+                                data-pt-placeholder="conte-me mais sobre o seu projeto..." required></textarea></div>
+                        <button type="submit" class="submit-btn" data-en="send message ↗"
+                            data-pt="enviar mensagem ↗">send
+                            message ↗</button>
+                    </form>
+                    <div class="success-box" id="successBox">
+                        <div class="check">✓</div>
+                        <h3 class="serif" style="margin:0 0 6px; font-size:18px;" data-en="Message sent"
+                            data-pt="Mensagem enviada">Message
+                            sent</h3>
+                        <p style="color:var(--muted); font-size:13.5px; margin:0;"
+                            data-en="Thanks for getting in touch. I'll get back to you as soon as I can."
+                            data-pt="Obrigado pela mensagem. Responderei assim que possível.">Thanks for getting in touch. I'll get back to you as soon as I can.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-mark">ag.</div>
+                    <div>
+                        <div class="name">António Galveia</div>
+                        <div class="role" data-en="Web Designer &amp; Frontend
+                                    Developer" data-pt="Web Designer &amp; Desenvolvedor Frontend">Web
+                            Designer &amp; Frontend
+                            Developer</div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <span>antonioalves.galveia@gmail.com</span>
+                    <span>Lisboa, Portugal</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/GalveiaAntonio" aria-label="GitHub" target="_blank"><svg
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.093.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/in/ant%C3%B3nio-galveia/" aria-label="LinkedIn"
+                        target="_blank"><svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4V9Z" />
+                        </svg></a>
+                    <a href="https://x.com/galveia_iam" aria-label="Twitter" target="_blank"><svg viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg></a>
+                </div>
+            </div>
+            <p class="copyright-line" data-pt="© 2026 António Galveia · Todos os direitos reservados" data-en="© 2026 António Galveia · All
+                        rights
+                        reserved">© 2026 António Galveia · All
+                rights
+                reserved</p>
+        </div>
+    </footer>
+
+
+
+
+    <section class="project-modal" id="projectModal" aria-hidden="true">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <article class="modal-box" role="dialog" aria-modal="true" aria-label="project details">
+            <button type="button" class="modal-close" id="modalClose" aria-label="close">&times;</button>
+            <div class="modal-gallery">
+                <button type="button" class="gallery-nav prev" id="galleryPrev"
+                    aria-label="previous image">&lsaquo;</button>
+                <img class="gallery-image" id="modalImage" src alt>
+                <button type="button" class="gallery-nav next" id="galleryNext"
+                    aria-label="next image">&rsaquo;</button>
+                <div class="gallery-dots" id="galleryDots"></div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p class="modal-desc" id="modalDesc"></p>
+                <div class="modal-tools" id="modalTools"></div>
+                <div class="modal-links">
+                    <a id="modalLive" class="btn btn-ink" target="_blank" rel="noopener" data-en="live site ↗"
+                        data-pt="ver site ↗">live
+                        site ↗</a>
+                    <a id="modalCode" class="btn btn-outline" target="_blank" rel="noopener" data-en="view code ↗"
+                        data-pt="ver código ↗">view code ↗</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script src="./index.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "António Galveia",
+  "url": "https://galveiadev.vercel.app/",
+  "jobTitle": "Frontend Developer & Web Designer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lisbon",
+    "addressCountry": "PT"
+  },
+  "sameAs": [
+    "https://github.com/GalveiaAntonio",
+    "https://www.linkedin.com/in/ant%C3%B3nio-galveia/",
+    "https://x.com/galveia_iam"
+  ]
+}
+</script>
+</body>
+
+</html>

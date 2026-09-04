@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://galveiadev.vercel.app/sitemap.xml
