@@ -357,7 +357,7 @@ html[data-theme="dark"] .theme-toggle .moon {
     margin: 0 0 26px;
 }
 
-.hero-actions{
+.hero-actions {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
@@ -545,6 +545,13 @@ html[data-theme="dark"] .theme-toggle .moon {
 
 .work-thumb.t2 {
     background: url("media/montra1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.work-thumb.t3 {
+    background: url("media/graphPage.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

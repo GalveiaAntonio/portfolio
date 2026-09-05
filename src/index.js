@@ -1,9 +1,12 @@
 (function () {
     let html = document.documentElement;
     let btn = document.getElementById('themeToggle');
+
     function apply(t) {
         html.setAttribute('data-theme', t);
-        try { localStorage.setItem('theme', t); } catch (e) { }
+        try {
+            localStorage.setItem('theme', t);
+        } catch (e) { }
     }
     btn.addEventListener('click', function () {
         apply(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
@@ -19,17 +22,35 @@ let success = document.getElementById('successBox');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!form.checkValidity()) {
-        form.reportValidity(); return;
+        form.reportValidity();
+        return;
     }
     let btn = form.querySelector('button[type="submit"]');
     let original = btn.textContent;
-    btn.textContent = 'sending...'; btn.disabled = true;
-    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+    btn.textContent = 'sending...';
+    btn.disabled = true;
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
         .then(function (r) {
-            if (r.ok) { form.style.display = 'none'; success.classList.add('show'); }
-            else { btn.textContent = original; btn.disabled = false; alert('There was an error while send the message. Try again later.'); }
+            if (r.ok) {
+                form.style.display = 'none';
+                success.classList.add('show');
+            } else {
+                btn.textContent = original;
+                btn.disabled = false;
+                alert('There was an error while send the message. Try again later.');
+            }
         })
-        .catch(function () { btn.textContent = original; btn.disabled = false; alert('There was an error while send the message. Try again later.'); });
+        .catch(function () {
+            btn.textContent = original;
+            btn.disabled = false;
+            alert('There was an error while send the message. Try again later.');
+        });
 });
 
 let currentLang = 'en';
@@ -46,23 +67,34 @@ let FLAG_PT = '<svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect
         html.setAttribute('lang', lang);
 
         document.querySelectorAll('[data-en]').forEach(function (el) {
-            if (el.dataset.pt === undefined) { el.dataset.pt = el.innerHTML; }
+            if (el.dataset.pt === undefined) {
+                el.dataset.pt = el.innerHTML;
+            }
             el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.pt;
         });
 
         document.querySelectorAll('[data-en-placeholder]').forEach(function (el) {
-            if (el.dataset.ptPlaceholder === undefined) { el.dataset.ptPlaceholder = el.getAttribute('placeholder'); }
+            if (el.dataset.ptPlaceholder === undefined) {
+                el.dataset.ptPlaceholder = el.getAttribute('placeholder');
+            }
             el.setAttribute('placeholder', lang === 'en' ? el.dataset.enPlaceholder : el.dataset.ptPlaceholder);
         });
 
-        if (lang === 'en') { flagEl.innerHTML = FLAG_PT; codeEl.textContent = 'PT'; }
-        else { flagEl.innerHTML = FLAG_GB; codeEl.textContent = 'EN'; }
+        if (lang === 'en') {
+            flagEl.innerHTML = FLAG_PT;
+            codeEl.textContent = 'PT';
+        } else {
+            flagEl.innerHTML = FLAG_GB;
+            codeEl.textContent = 'EN';
+        }
     }
 
     btn.addEventListener('click', function (e) {
         e.preventDefault();
         let next = currentLang === 'en' ? 'pt' : 'en';
-        try { localStorage.setItem('lang', next); } catch (err) { }
+        try {
+            localStorage.setItem('lang', next);
+        } catch (err) { }
         let url = new URL(window.location.href);
         url.searchParams.set('lang', next);
         window.location.href = url.toString();
@@ -75,7 +107,9 @@ let FLAG_PT = '<svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect
         try {
             let saved = localStorage.getItem('lang');
             applyLang(saved === 'en' ? 'en' : 'pt');
-        } catch (e) { applyLang('en'); }
+        } catch (e) {
+            applyLang('en');
+        }
     }
 })();
 
@@ -121,16 +155,20 @@ let FLAG_PT = '<svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect
         let lang = currentLangValue();
 
         let imgsAttr = card.getAttribute('data-images') || '';
-        images = imgsAttr.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+        images = imgsAttr.split(',').map(function (s) {
+            return s.trim();
+        }).filter(Boolean);
         current = 0;
 
-        let title = lang === 'pt'
-            ? (card.getAttribute('data-title-pt') || card.getAttribute('data-title') || '')
-            : (card.getAttribute('data-title') || '');
-        let desc = lang === 'pt'
-            ? (card.getAttribute('data-desc-pt') || card.getAttribute('data-desc') || '')
-            : (card.getAttribute('data-desc') || '');
-        let tools = (card.getAttribute('data-tools') || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+        let title = lang === 'pt' ?
+            (card.getAttribute('data-title-pt') || card.getAttribute('data-title') || '') :
+            (card.getAttribute('data-title') || '');
+        let desc = lang === 'pt' ?
+            (card.getAttribute('data-desc-pt') || card.getAttribute('data-desc') || '') :
+            (card.getAttribute('data-desc') || '');
+        let tools = (card.getAttribute('data-tools') || '').split(',').map(function (s) {
+            return s.trim();
+        }).filter(Boolean);
         let live = card.getAttribute('data-live') || '#';
         let code = card.getAttribute('data-code') || '#';
 
@@ -147,7 +185,9 @@ let FLAG_PT = '<svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect
         dotsEl.innerHTML = '';
         images.forEach(function (_, i) {
             let dot = document.createElement('span');
-            dot.addEventListener('click', function () { goTo(i); });
+            dot.addEventListener('click', function () {
+                goTo(i);
+            });
             dotsEl.appendChild(dot);
         });
 
@@ -178,18 +218,27 @@ let FLAG_PT = '<svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><rect
     }
 
     document.querySelectorAll('.work-card').forEach(function (card) {
-        card.addEventListener('click', function () { openModal(card); });
+        card.addEventListener('click', function () {
+            openModal(card);
+        });
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
         card.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(card);
+            }
         });
     });
 
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
-    prevBtn.addEventListener('click', function () { goTo(current - 1); });
-    nextBtn.addEventListener('click', function () { goTo(current + 1); });
+    prevBtn.addEventListener('click', function () {
+        goTo(current - 1);
+    });
+    nextBtn.addEventListener('click', function () {
+        goTo(current + 1);
+    });
 
     document.addEventListener('keydown', function (e) {
         if (!modal.classList.contains('show')) return;
