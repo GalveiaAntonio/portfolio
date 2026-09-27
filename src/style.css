@@ -557,6 +557,13 @@ html[data-theme="dark"] .theme-toggle .moon {
     background-repeat: no-repeat;
 }
 
+.work-thumb.t4 {
+    background: url("media/casacais1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .work-thumb .view-hint {
     position: absolute;
     bottom: 12px;
