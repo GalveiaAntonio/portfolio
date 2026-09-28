@@ -955,6 +955,12 @@ footer {
 
 .footer-social {
     display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-links {
+    display: flex;
     gap: 10px;
 }
 
@@ -972,7 +978,7 @@ footer {
 
 .footer-social a:hover {
     background-color: var(--olive-dark);
-    border: none;
+    border-color: var(--olive-dark);
 }
 
 html[data-theme="light"] .footer-social a:hover {
@@ -982,6 +988,22 @@ html[data-theme="light"] .footer-social a:hover {
 .footer-social svg {
     width: 14px;
     height: 14px;
+}
+
+.zaask-badge {
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.zaask-badge img {
+    display: block;
+    max-width: 110px;
+    height: auto;
 }
 
 .copyright-line {
